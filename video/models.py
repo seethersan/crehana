@@ -1,6 +1,6 @@
 from django.db import models
-from curso.models import Curso
-from usuario.models import Usuario
+from curso.models import Curso, Categoria
+from usuario.models import Usuario, Inscripcion
 from datetime import date
 
 class ProgresoVideo(models.Model):
@@ -8,4 +8,6 @@ class ProgresoVideo(models.Model):
     minutos_rep_diaria = models.IntegerField()
     id_curso = models.ForeignKey(to=Curso, on_delete=models.CASCADE)
     id_usuario = models.ForeignKey(to=Usuario, on_delete=models.CASCADE)
+    id_categoria = models.ForeignKey(to=Categoria, on_delete=models.CASCADE)
+    id_inscripcion = models.ForeignKey(to=Inscripcion, on_delete=models.CASCADE)
     dia = models.DateField(default=date.today)
