@@ -6,8 +6,8 @@ from datetime import date
 class ProgresoVideo(models.Model):
     id = models.CharField(max_length=10, primary_key=True)
     minutos_rep_diaria = models.IntegerField()
-    id_curso = models.ForeignKey(to=Curso, on_delete=models.CASCADE)
-    id_usuario = models.ForeignKey(to=Usuario, on_delete=models.CASCADE)
-    id_categoria = models.ForeignKey(to=Categoria, on_delete=models.CASCADE)
-    id_inscripcion = models.ForeignKey(to=Inscripcion, on_delete=models.CASCADE)
+    curso = models.ForeignKey(to=Curso, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(to=Usuario, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(to=Categoria, on_delete=models.CASCADE)
+    inscripcion = models.ForeignKey(to=Inscripcion, on_delete=models.CASCADE)
     dia = models.DateField(default=date.today)
