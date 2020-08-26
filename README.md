@@ -11,7 +11,7 @@ virtualenv env && source env/bin/activate
 
 ```
 git clone https://github.com/seethersan/crehana.git
-cd productsapi
+cd crehana
 ```
 
 3. Install requirements
