@@ -10,7 +10,7 @@ virtualenv env && source env/bin/activate
 2. Clone the repository
 
 ```
-git clone https://github.com/seethersan/productsapi.git
+git clone https://github.com/seethersan/crehana.git
 cd productsapi
 ```
 
